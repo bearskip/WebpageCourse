@@ -29,6 +29,14 @@
     Dans l'étreinte des âmes, un souffle s'unit,<br>
     Écoutez le murmure, écho infini de nos vies.<br>
   </div>
+
+  <div id="game" class="text-center">
+    <h2>Jeu : Devine le nombre</h2>
+    <p>Devine un nombre entre 1 et 100 :</p>
+    <input type="number" id="guess" min="1" max="100">
+    <button onclick="checkGuess()">Valider</button>
+    <p id="message"></p>
+  </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -51,9 +59,26 @@
 
   // Changement de couleur toutes les 5 secondes
   setInterval(changeColor, 5000);
+
+  // Jeu : Devine le nombre
+  var secretNumber = Math.floor(Math.random() * 100) + 1;
+  var tries = 0;
+
+  function checkGuess() {
+    var guess = parseInt(document.getElementById('guess').value);
+    var messageElement = document.getElementById('message');
+    tries++;
+
+    if (guess === secretNumber) {
+      messageElement.textContent = `Bravo ! Tu as deviné le nombre en ${tries} essais.`;
+    } else if (guess < secretNumber) {
+      messageElement.textContent = "Le nombre est plus grand.";
+    } else {
+      messageElement.textContent = "Le nombre est plus petit.";
+    }
+  }
 </script>
 
 </body>
 </html>
-
 
