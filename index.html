@@ -2,36 +2,38 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Poème sur l'Énergie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dans l'étreinte des âmes</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
   body {
-    font-family: Arial, sans-serif; /* Une police de caractères plus lisible */
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f4f4; /* Couleur de fond pour contraste */
+    background-color: #f4f4f4;
+    padding-top: 50px;
   }
 
   #poem {
     font-size: 24px;
     text-align: center;
-    color: #000; /* Couleur initiale du texte */
+    color: #000;
   }
 </style>
 </head>
 <body>
 
-<h1>Dans l'étreinte des âmes</h1> <!-- Titre visible -->
+<div class="container">
+  <h1 class="text-center">Dans l'étreinte des âmes</h1>
 
-<div id="poem">
-  Sous les cieux étoilés, l'amour s'éveille,<br>
-  Telle une rose éclose, douce merveille.<br>
-  Dans l'étreinte des âmes, un souffle s'unit,<br>
-  Écoutez le murmure, écho infini de nos vies.<br>
+  <div id="poem" class="mb-5">
+    Sous les cieux étoilés, l'amour s'éveille,<br>
+    Telle une rose éclose, douce merveille.<br>
+    Dans l'étreinte des âmes, un souffle s'unit,<br>
+    Écoutez le murmure, écho infini de nos vies.<br>
+  </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
   var colors = ["red", "green", "blue", "purple", "orange"];
   var currentColor = 0;
@@ -53,4 +55,5 @@
 
 </body>
 </html>
+
 
