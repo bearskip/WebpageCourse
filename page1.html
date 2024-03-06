@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page 2 - Blocks</title>
+<title>Page 2 - Block with Button</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
   body {
@@ -11,44 +11,37 @@
     padding-top: 50px;
   }
 
-  .block {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+  .block-container {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-  }
-
-  .block-1 {
-    background-color: #FF5733;
-  }
-
-  .block-2 {
-    background-color: #FFC300;
-  }
-
-  .block-3 {
-    background-color: #C70039;
-  }
-
-  .block-4 {
-    background-color: #900C3F;
-  }
-
-  .block-5 {
-    background-color: #581845;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
   }
 </style>
 </head>
 <body>
 
 <div class="container text-center">
-  <h1>Page 2 - Blocks</h1>
+  <h1>Page 2 - Button</h1>
 
-  <div class="block block-1"></div>
-  <div class="block block-2"></div>
-  <div class="block block-3"></div>
-  <div class="block block-4"></div>
-  <div class="block block-5"></div>
+  <div class="block-container">
+    <h2>Name of the Block</h2>
+    <button class="btn">Click Me</button>
+    <button class="btn" onclick="window.location.href = 'page2.html';">Click Me</button>
+  </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
