@@ -1,7 +1,32 @@
-<html>
-  <head>
-    <body>
-      <div id="demo"></div>
-    </body>
-  </head>
-</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Poème sur l'Énergie</title>
+<style>
+  #poem {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div id="poem">
+  L'énergie qui nous entoure,<br>
+  Telle une lumière au fil des jours,<br>
+  Pulsant au cœur de notre terre,<br>
+  Souffle de vie, force éphémère.
+</div>
+
+<script>
+  var colors = ["red", "green", "blue", "purple", "orange"];
+  var currentColor = 0;
+
+  function changeColor() {
+    document.getElementById('poem').style.color = colors[currentColor];
+    currentColor = (currentColor + 1) % colors.length;
+  }
+
+ 
