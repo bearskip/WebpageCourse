@@ -4,14 +4,26 @@
 <meta charset="UTF-8">
 <title>Poème sur l'Énergie</title>
 <style>
+  body {
+    font-family: Arial, sans-serif; /* Une police de caractères plus lisible */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4; /* Couleur de fond pour contraste */
+  }
+
   #poem {
     font-size: 24px;
     text-align: center;
-    padding: 20px;
+    color: #000; /* Couleur initiale du texte */
   }
 </style>
 </head>
 <body>
+
+<h1>Poème sur l'Énergie</h1> <!-- Titre visible -->
 
 <div id="poem">
   L'énergie qui nous entoure,<br>
@@ -25,8 +37,20 @@
   var currentColor = 0;
 
   function changeColor() {
-    document.getElementById('poem').style.color = colors[currentColor];
-    currentColor = (currentColor + 1) % colors.length;
+    var poemElement = document.getElementById('poem');
+    if (poemElement) {
+      poemElement.style.color = colors[currentColor];
+      currentColor = (currentColor + 1) % colors.length;
+    }
   }
 
- 
+  // Initialisation immédiate de la couleur pour éviter l'attente de 5 secondes au départ
+  changeColor();
+
+  // Changement de couleur toutes les 5 secondes
+  setInterval(changeColor, 5000);
+</script>
+
+</body>
+</html>
+
